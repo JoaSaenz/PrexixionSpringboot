@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head xmlns="http://www.w3.org/1999/xhtml" 
+        xmlns:th="http://www.thymeleaf.org" 
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+        >
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prexixion Blockcom</title>
+    <link rel="icon" href="img/prextax.png">
+
+    <th:block th:include="includes/loginStyles.html"></th:block>
+    
+</head>
+<body>
+    <form class="form-signin" action="" th:action="@{/login}" th:object="${personal}" method="POST">
+        <br>
+        <br>
+        <br>
+        <div class="text-center mb-4">
+            <img class="mb-4" src="img/Recurso 4.png" alt="" width="72" height="72">
+            <h1 class="h3 mb-3 font-weight-bold text-white">PREXIXION BLOCKCOM</h1>
+            <p class="text-white">Ingrese sus credenciales.</p>
+        </div>
+        <br>
+        <br>
+
+        <div class="form-label-group">
+            <select class="form-control" data-style="btn-white" data-live-search="true" id="selectHome" name="selectHome" th:field="*{internoExterno}">
+                    <option value="1">GERENCIA.COM</option>
+                    <option value="2">EXTERNO</option>
+            </select>
+        </div>
+
+        <div class="form-label-group">
+            <input type="number" id="inputDni" name="dni" class="form-control" placeholder="DNI" required autofocus th:field="*{dni}">
+            <label for="inputDni">DNI</label>
+        </div>
+
+        <div class="form-label-group">
+            <input type="password" id="inputClave" name="clave" class="form-control" placeholder="Clave" required th:field="*{clave}">
+            <label for="inputClave">Clave</label>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"><span class="text-white"> Recordarme?</span>
+            </label>
+        </div>
+        <button class="btn btn-lg btn-outline-danger btn-block" type="submit">Ingresar</button>
+
+        <p class="text-muted text-center mt-5">Desarrollado por <a href="https://www.gerenciasac.com/">Gerencia.com</a>.</p>
+        <p class="text-muted text-center mb-3">&copy; 2018-2020</p>
+
+    </form>
+</body>
+
+</html>

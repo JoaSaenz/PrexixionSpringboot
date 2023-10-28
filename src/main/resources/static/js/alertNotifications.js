@@ -1,0 +1,24 @@
+function alertGrowl(message, type) {
+    $.bootstrapGrowl(message, {type: type, delay: 3000, offset: {from: 'top', amount: 60}, align: 'center', width: 300});
+};
+
+function alertTop(message, type) {
+    $.bootstrapGrowl(message, {type: type, delay: 1000, offset: {from: 'top', amount: 50}, align: 'right', width: 300});
+};
+
+function alertTopLeft(message, type) {
+    $.bootstrapGrowl(message, {type: type, delay: 1000, offset: {from: 'top', amount: 60}, align: 'left', width: 300});
+};
+
+function alertTopRight(message, type) {
+    $.bootstrapGrowl(message, {type: type, delay: 2000, offset: {from: 'top', amount: 60}, align: 'right', width: 400, stackup_spacing: -60});
+};
+
+function alertBottom(message, type) {
+    $.bootstrapGrowl(message, {type: type, delay: 1000, offset: {from: 'bottom', amount: 60}, align: 'left', width: 300});
+};
+
+function alert(message, type, width) {
+    $.bootstrapGrowl(message, {type: type, delay: 3000, offset: {from: 'top', amount: 60}, align: 'center', width: width});
+};
+
